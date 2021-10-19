@@ -1,7 +1,6 @@
 #!/bin/bash
 
 VERSION=v0.6
-cd f5c-$VERSION
 
 fast5datadir=./demo_data/GBM_RTK2_20210311_Testrun_BC06/GBM_RTK2_20210311_Testrun_BC06/20210311_1151_MN26891_FAP12445_0513da25/fast5_pass/barcode06/
 fastqfile=./demo_data/GBM_RTK2_20210311_Testrun_BC06/GBM_RTK2_20210311_Testrun_BC06/20210311_1151_MN26891_FAP12445_0513da25/fastq_pass/barcode06/FAP12445_pass_barcode06_cc9c5597_0.fastq
