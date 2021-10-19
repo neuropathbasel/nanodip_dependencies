@@ -1,4 +1,6 @@
 # nanodip_dependencies
-Dependencies for NaniDiP
+### Dependencies for NaniDiP
 
-1st push from SSH meqneuropat03
+htslib_buildscript.sh
+
+
