@@ -8,3 +8,7 @@ make clean
 cd ..
 make clean
 cd ..
+
+rm -rf demo_data/demo_generated_result/*
+
+
