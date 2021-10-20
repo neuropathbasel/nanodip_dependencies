@@ -246,7 +246,7 @@ configure:4444: $? = 0
 configure:4444: result: yes
 configure:4444: checking for srand48_deterministic
 configure:4444: gcc -o conftest  -Wall -g -O2 -fvisibility=hidden   -fvisibility=hidden conftest.c  >&5
-/tmp/ccLIX8de.o: In function `main':
+/tmp/ccKrdv7g.o: In function `main':
 /applications/nanodip_dependencies/samtools/htslib/conftest.c:61: undefined reference to `srand48_deterministic'
 collect2: error: ld returned 1 exit status
 configure:4444: $? = 1
@@ -329,7 +329,7 @@ configure:4626: gcc -o conftest  -Wall -g -O2 -fvisibility=hidden   -fvisibility
 conftest.c:35:6: warning: conflicting types for built-in function 'log' [-Wbuiltin-declaration-mismatch]
  char log ();
       ^~~
-/tmp/ccEzuyeu.o: In function `main':
+/tmp/ccDDBzIx.o: In function `main':
 /applications/nanodip_dependencies/samtools/htslib/conftest.c:39: undefined reference to `log'
 collect2: error: ld returned 1 exit status
 configure:4626: $? = 1
@@ -518,7 +518,7 @@ configure:5235: $? = 0
 configure:5244: result: yes
 configure:5379: checking for CCHmac
 configure:5379: gcc -o conftest  -Wall -g -O2 -fvisibility=hidden   -fvisibility=hidden conftest.c -llzma -lbz2 -lz -lm  >&5
-/tmp/cc2SaMic.o: In function `main':
+/tmp/ccfc9Czl.o: In function `main':
 /applications/nanodip_dependencies/samtools/htslib/conftest.c:68: undefined reference to `CCHmac'
 collect2: error: ld returned 1 exit status
 configure:5379: $? = 1
@@ -597,7 +597,7 @@ configure: failed program was:
 configure:5379: result: no
 configure:5386: checking for library containing HMAC
 configure:5417: gcc -o conftest  -Wall -g -O2 -fvisibility=hidden   -fvisibility=hidden conftest.c -llzma -lbz2 -lz -lm  >&5
-/tmp/cchKf4Jh.o: In function `main':
+/tmp/ccGRo0Sp.o: In function `main':
 /applications/nanodip_dependencies/samtools/htslib/conftest.c:45: undefined reference to `HMAC'
 collect2: error: ld returned 1 exit status
 configure:5417: $? = 1
