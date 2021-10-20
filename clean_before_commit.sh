@@ -1,9 +1,10 @@
 #!/bin/bash
 
 # clean build directories before git commits
+thisDir=`pwd`
 
 # f5c
-cd f5c-v0.6
+cd $thisDir/f5c-v0.6
 cd htslib
 make clean
 cd ..
@@ -11,7 +12,7 @@ make clean
 cd ..
 
 # samtools
-cd samtools/htslib
+cd $thisDir/samtools/htslib
 chmod +x ./configure
 ./configure
 make clean
@@ -20,12 +21,21 @@ cd ..
 make clean
 
 # nanopolish & minimap2
-cd nanopolish
+cd $thisDir/nanopolish
 make clean
 cd minimap2
 make clean
+cd ..
+cd ..
+
+# R-3-6-3
+rm -rf $thisDir/tmp
+rm -rf $thisDir/R-3.6.3
+
+# reference_data
+rm -rf $thisDir/reference_data
 
 # demo data
-rm -rf demo_data/demo_generated_result/*
+rm -rf $thisDir/demo_data/demo_generated_result/*
 
 
