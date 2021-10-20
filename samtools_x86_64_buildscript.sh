@@ -1,9 +1,11 @@
 #!/bin/bash
 
 # install samtools on ubuntu 18.04 x86_64
+sudo apt -y install libncurses5-dev libbz2-dev liblzma-dev libcurl4-openssl-dev libssl-dev autoconf
 
 # compile htslib
 cd samtools/htslib
+autoconf -i
 chmod +x ./configure
 ./configure
 make clean
