@@ -1,0 +1,67 @@
+name: SLOW5 Python CI Github
+
+on:
+  push:
+    branches: [ master, dev, cleanup ]
+  pull_request:
+    branches: [ master, dev, cleanup ]
+
+jobs:
+  ubuntu_14:
+    name: pyslow5 Ubuntu_14
+    runs-on: ubuntu-16.04
+    container: ubuntu:14.04
+    steps:
+    - uses: actions/checkout@v2
+    - name: install packages
+      run: sudo apt-get update && sudo apt-get install -y zlib1g-dev python3-pip && pip3 install setuptools cython "numpy>=1.13.3,<1.15.0" --user
+    - name: env
+      run: lsb_release -a &&  ldd --version && gcc --version && g++ --version && python3 --version
+    - name: build
+      run: make pyslow5
+  ubuntu_16:
+    name: pyslow5 Ubuntu 16
+    runs-on: ubuntu-16.04
+    steps:
+    - uses: actions/checkout@v2
+    - name: install packages
+      run: sudo apt-get update && sudo apt-get install -y zlib1g-dev python3-pip python3-setuptools && pip3 install cython "numpy>=1.14.5,<1.19.0"
+    - name: env
+      run: lsb_release -a &&  ldd --version && gcc --version && g++ --version  && python3 --version
+    - name: build
+      run: make pyslow5
+  pyslow5_ubuntu_18:
+    name: pyslow5 Ubuntu 18
+    runs-on: ubuntu-18.04
+    steps:
+    - uses: actions/checkout@v2
+    - name: install packages
+      run: sudo apt-get update && sudo apt-get install -y zlib1g-dev python3-pip && pip3 install setuptools cython numpy
+    - name: build
+      run: make pyslow5
+  ubuntu_20:
+    name: pyslow5 Ubuntu 20
+    runs-on: ubuntu-20.04
+    steps:
+    - uses: actions/checkout@v2
+    - name: install packages
+      run: sudo apt-get update && sudo apt-get install -y zlib1g-dev python3-pip && pip3 install setuptools cython numpy
+    - name: build
+      run: make pyslow5
+  arm64:
+    name: pyslow5 ubuntu arm
+    runs-on: ubuntu-latest
+    steps:
+    - run: docker run --rm --privileged multiarch/qemu-user-static:register --reset
+    - uses: docker://multiarch/ubuntu-core:arm64-bionic
+      with:
+        args: 'uname -a'
+    - uses: actions/checkout@v1
+    - uses: docker://multiarch/ubuntu-core:arm64-bionic
+      with:
+        args: >
+          bash -c "apt-get update &&
+          apt-get install -y zlib1g-dev gcc make python3 python3-pip python3-numpy &&
+          pip3 install setuptools cython &&
+          ldd --version && gcc --version && python3 --version &&
+          make pyslow5

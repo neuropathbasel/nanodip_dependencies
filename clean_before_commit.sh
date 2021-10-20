@@ -19,6 +19,12 @@ cd ..
 ./configure --with-htslib=./htslib          # Needed for choosing optional functionality
 make clean
 
+# nanopolish & minimap2
+cd nanopolish
+make clean
+cd minimap2
+make clean
+
 # demo data
 rm -rf demo_data/demo_generated_result/*
 
