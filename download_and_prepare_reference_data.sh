@@ -2,7 +2,9 @@
 
 # download and prepare reference data
 thisDir=`pwd`
-mkdir -p reference_data/minimap_data
+cd ..
+targetDir=`pwd`/reference_data
+mkdir -p $targetDir/minimap_data
 # human reference genome
 refgenomafaUrl="http://hgdownload.cse.ucsc.edu/goldenPath/hg19/bigZips/hg19.fa.gz"
 
