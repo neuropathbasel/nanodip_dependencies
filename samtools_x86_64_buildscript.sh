@@ -1,8 +1,9 @@
 #!/bin/bash
 
-# install samtools on ubuntu 18.04 x86_64
-sudo apt -y install libncurses5-dev libbz2-dev liblzma-dev libcurl4-openssl-dev libssl-dev autoconf
+thisDir=`pwd`
 
+cp -rpvf ./samtools ../
+cd ..
 # compile htslib
 cd samtools/htslib
 autoconf -i
@@ -20,3 +21,5 @@ autoconf -Wno-syntax  # Generate the configure script
 make clean
 ./configure --with-htslib=./htslib          # Needed for choosing optional functionality
 make
+
+cd $thisDir

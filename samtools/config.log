@@ -27,6 +27,7 @@ uname -v = #166-Ubuntu SMP Fri Sep 17 19:37:52 UTC 2021
 /usr/bin/oslevel       = unknown
 /bin/universe          = unknown
 
+PATH: /usr/local/cuda/bin
 PATH: /usr/local/sbin
 PATH: /usr/local/bin
 PATH: /usr/sbin
