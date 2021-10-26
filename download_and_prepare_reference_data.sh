@@ -3,7 +3,8 @@
 # download and prepare reference data
 thisDir=`pwd`
 cd ..
-targetDir=`pwd`/reference_data
+appDir=`pwd`
+targetDir=$appDir/reference_data
 mkdir -p $targetDir/minimap_data
 # human reference genome
 refgenomafaUrl="http://hgdownload.cse.ucsc.edu/goldenPath/hg19/bigZips/hg19.fa.gz"
@@ -16,3 +17,4 @@ refgenomefa="/applications/reference_data/minimap_data/hg19.fa"
 refgenomemmi="/applications/reference_data/minimap_data/hg19_20201203.mmi" # human reference genome minimap2 mmi
 ilmncgmapfile="/applications/reference_data/minimap_data/hg19_HumanMethylation450_15017482_v1-2_cgmap.tsv" # Illumina probe names of the 450K array
 
+cd $thisDir

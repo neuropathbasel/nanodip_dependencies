@@ -4,7 +4,6 @@
 myR="R-3.6.3"
 myRbranch="R-3"
 
-
 thisDir=`pwd`
 cd ..
 
