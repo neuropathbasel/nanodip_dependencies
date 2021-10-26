@@ -1,7 +1,10 @@
 #!/bin/bash
 
+thisDir=`pwd`
+cp -rpvf nanopolish ../
+cd ../nanopolish
+
 # nanopolish & minimap2
-cd nanopolish
 make clean
 cd minimap2
 make clean
@@ -10,3 +13,4 @@ make
 cd minimap2
 make
 
+cd $thisDir
