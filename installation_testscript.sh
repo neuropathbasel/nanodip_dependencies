@@ -13,7 +13,7 @@ refgenomemmi=./reference_data/minimap_data/hg19_nanodip.mmi
 #index, call methylation and get methylation frequencies
 ./f5c-$VERSION/f5c index -t 1 --iop 100 -d $fast5datadir $fastqfile
 # get sorted BAM (4 threads)
-./nanopolish/minimap2/minimap2 -a -x map-ont $refgenomemmi $fastqfile -t 4 | samtools sort -T tmp -o $fast5datadir/$fast5fileid-reads_sorted.bam
+./nanopolish/minimap2/minimap2 -a -x map-ont $refgenomemmi $fastqfile -t 4 | ./samtools/samtools sort -T tmp -o $fast5datadir/$fast5fileid-reads_sorted.bam
 ./samtools/samtools index $fast5datadir/$fast5fileid-reads_sorted.bam
 
 # set B to 2 megabases (GPU) and 0.4 kreads
