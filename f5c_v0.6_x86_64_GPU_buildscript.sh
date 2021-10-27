@@ -9,9 +9,9 @@ thisDir=`pwd`
 export PATH="/usr/local/cuda/bin:${PATH}"
 VERSION=v0.6
 
-cp -rpvf f5c-$VERSION ../
+cp -rpvf f5c-$VERSION ../f5c
 cd ..
-cd f5c-$VERSION
+cd f5c
 
 # build htslib
 cd htslib

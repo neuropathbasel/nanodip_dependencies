@@ -10,8 +10,10 @@ mkdir -p $targetDir/minimap_data
 refgenomafaUrl="http://hgdownload.cse.ucsc.edu/goldenPath/hg19/bigZips/hg19.fa.gz"
 
 cd $targetDir/minimap_data
-wget $refgenomafaUrl
-$thisDir/nanopolish/minimap2/minimap2 -x map-ont -d hg19_nanodip.mmi hg19.fa.gz
+wget $refgenomafaUrl -O hg19.fa.gz
+gunzip hg19.fa.gz
+
+$thisDir/nanopolish/minimap2/minimap2 -x map-ont -d hg19_nanodip.mmi hg19.fa
 
 refgenomefa="/applications/reference_data/minimap_data/hg19.fa" 
 refgenomemmi="/applications/reference_data/minimap_data/hg19_20201203.mmi" # human reference genome minimap2 mmi
