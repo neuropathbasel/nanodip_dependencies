@@ -22,4 +22,4 @@ ilmncgmapfile="/applications/reference_data/minimap_data/hg19_HumanMethylation45
 ./f5c/f5c call-methylation -B2000000 -K400 -b $fast5datadir/$fast5fileid-reads_sorted.bam -g $refgenomefa -r $fastqfile  > $fast5datadir/$fast5fileid-result.tsv
 ./f5c/f5c meth-freq -c 2.5 -s -i $fast5datadir/$fast5fileid-result.tsv > $fast5datadir/$fast5fileid-freq.tsv
 
-./R-4.0.3/bin/Rscript ./nanodip_dependencies/rscripts/readCpGs_mod02.R $fast5datadir/$fast5fileid-freq.tsv $ilmncgmapfile $fast5datadir/$fast5fileid-methoverlap.tsv
+./R-4.0.3/bin/Rscript ./nanodip_dependencies/rscripts/readCpGs_mod02.R $fast5datadir/$fast5fileid-freq.tsv $ilmncgmapfile $fast5datadir/$fast5fileid-methoverlap.tsv $fast5datadir/$fast5fileid-methoverlapcount.txt
