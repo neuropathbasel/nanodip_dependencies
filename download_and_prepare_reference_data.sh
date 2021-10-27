@@ -13,10 +13,9 @@ cd $targetDir/minimap_data
 wget $refgenomafaUrl -O hg19.fa.gz
 gunzip hg19.fa.gz
 
-$thisDir/nanopolish/minimap2/minimap2 -x map-ont -d hg19_nanodip.mmi hg19.fa
+$appDir/nanopolish/minimap2/minimap2 -x map-ont -d hg19_nanodip.mmi hg19.fa
 
-refgenomefa="/applications/reference_data/minimap_data/hg19.fa" 
-refgenomemmi="/applications/reference_data/minimap_data/hg19_20201203.mmi" # human reference genome minimap2 mmi
-ilmncgmapfile="/applications/reference_data/minimap_data/hg19_HumanMethylation450_15017482_v1-2_cgmap.tsv" # Illumina probe names of the 450K array
+mkdir -p $appDir/applications/reference_data/microarray
+cp $thisDir/demo_data/microarray/hg19_HumanMethylation450_15017482_v1-2_cgmap.tsv $appDir/applications/reference_data/microarray/
 
 cd $thisDir
