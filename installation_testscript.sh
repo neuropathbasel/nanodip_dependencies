@@ -8,7 +8,7 @@ VERSION=v0.6
 fast5datadir=$thisDir/demo_data/GBM_RTK2_20210311_Testrun_BC06/GBM_RTK2_20210311_Testrun_BC06/20210311_1151_MN26891_FAP12445_0513da25/fast5_pass/barcode06/
 fast5fileid=FAP12445_pass_barcode06_cc9c5597_0
 fastqfile=$thisDir/demo_data/GBM_RTK2_20210311_Testrun_BC06/GBM_RTK2_20210311_Testrun_BC06/20210311_1151_MN26891_FAP12445_0513da25/fastq_pass/barcode06/FAP12445_pass_barcode06_cc9c5597_0.fastq
-refgenomemmi=./reference_data/reference_data/minimap_data/hg19_nanodip.mmi
+refgenomemmi=./reference_data/minimap_data/hg19_nanodip.mmi
 
 #index, call methylation and get methylation frequencies
 ./f5c-$VERSION/f5c index -t 1 --iop 100 -d $fast5datadir $fastqfile
