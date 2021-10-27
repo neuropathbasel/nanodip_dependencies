@@ -7,3 +7,4 @@
 ./samtools_x86_64_buildscript.sh
 ./R-4.0.3_x86_64_buildscript.sh
 ./download_and_prepare_reference_data.sh
+./installation_testscript.sh

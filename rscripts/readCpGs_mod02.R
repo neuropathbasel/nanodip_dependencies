@@ -6,7 +6,7 @@
 # test if there are 4 additional command line argments, if not, then terminate
 args = commandArgs(trailingOnly=TRUE)
 if (length(args)!=4) {
-	message("usage: Rscript [THISSCRIPT.R] [methylation frequency f5c/nanopolish output tsv] [cgmap tsv] [output file methoverlap.tsv]")
+	message("usage: Rscript [THISSCRIPT.R] [methylation frequency f5c/nanopolish output tsv] [cgmap tsv] [output file methoverlap.tsv] [output file methoverlapcount.txt]")
 } else {
 	# read input parameters
 	methylationcalls <- args[1]
