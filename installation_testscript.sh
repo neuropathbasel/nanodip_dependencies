@@ -9,7 +9,7 @@ fast5fileid=FAP12445_pass_barcode06_cc9c5597_0
 fastqfile=$thisDir/demo_data/GBM_RTK2_20210311_Testrun_BC06/GBM_RTK2_20210311_Testrun_BC06/20210311_1151_MN26891_FAP12445_0513da25/fastq_pass/barcode06/FAP12445_pass_barcode06_cc9c5597_0.fastq
 refgenomefa=$appDir/reference_data/minimap_data/hg19.fa
 refgenomemmi=$appDir/reference_data/minimap_data/hg19_nanodip.mmi
-ilmncgmapfile=$appDir/reference_data/microarray/HumanMethylation450_15017482_v1-2_cgmap.tsv # Illumina probe names of the 450K array
+ilmncgmapfile=$appDir/reference_data/microarray/hg19_HumanMethylation450_15017482_v1-2_cgmap.tsv # Illumina probe names of the 450K array
 
 #index, call methylation and get methylation frequencies
 $appDir/f5c/f5c index -t 1 --iop 100 -d $fast5datadir $fastqfile
