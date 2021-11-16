@@ -6,5 +6,5 @@
 ./nanopolish_minimap2_x86_64_buildscript.sh
 ./samtools_x86_64_buildscript.sh
 ./R-4.0.3_x86_64_buildscript.sh
-./download_and_prepare_reference_data.sh
+#./download_and_prepare_reference_data.sh #reference data
 ./installation_testscript.sh
